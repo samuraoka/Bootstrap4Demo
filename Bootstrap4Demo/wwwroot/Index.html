@@ -10,19 +10,26 @@
 <body>
     <div id="page" class="container">
         <header>
-            <div id="menu">
-                <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div id="logo">
-                <a href='.'>The Big Lebowski</a>
-            </div>
+            <nav id="menu" class="navbar navbar-expand-sm navbar-light bg-light">
+                <div id="logo" class="navbar-brand">
+                    <a href='Index.html'>The Big Lebowski</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a href="Index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <button class="btn btn-outline-success">Login</button>
+                </div>
+            </nav>
         </header>
         <main id="body" class="row">
-
             <section class="row justify-content-center d-none d-md-flex">
                 <img src="images/carousel-1.jpg" alt="1" class="col-3" />
                 <img src="images/carousel-2.jpg" alt="2" class="col-3" />
@@ -111,7 +118,9 @@
                 </p>
             </section>
         </main>
+
         <hr />
+
         <footer>
             <p>Text placeholders courtesy of <a href="http://www.lebowskiipsum.com/">Lebowski Ipsum</a>.</p>
         </footer>
