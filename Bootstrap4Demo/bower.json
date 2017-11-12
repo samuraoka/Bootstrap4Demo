@@ -6,12 +6,13 @@
     "jquery": "3.2.1",
     "jquery-validation": "1.17.0",
     "jquery-validation-unobtrusive": "3.2.6",
-    "popper.js": "v1.12.5"
+    "popper.js": "v1.12.7",
+    "open-iconic": "1.1.1"
   },
   "resolutions": {
     "bootstrap": "v4.0.0-beta",
     "jquery": "3.2.1",
     "jquery-validation": "1.17.0",
-    "popper.js": "v1.12.5"
+    "popper.js": "v1.12.7"
   }
 }
