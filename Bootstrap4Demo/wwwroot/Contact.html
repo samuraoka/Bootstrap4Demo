@@ -4,23 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Big Lebowski</title>
+    <link rel="stylesheet" href="/lib/open-iconic/font/css/open-iconic-bootstrap.css" />
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-darky.css" />
     <link href="css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="page">
-        <header>
-            <div id="menu">
-                <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+    <div id="page" class="container">
+        <nav id="menu" class="navbar navbar-expand-md navbar-dark bg-danger fixed-top">
+            <div id="logo" class="navbar-brand">
+                <a href='Index.html'><h1 class="h3 text-dark">The Big Lebowski</h1></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-chevron-bottom" title="icon chevron-bottom" aria-hidden="true"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item mr-3"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-dark">Login</a></li>
                 </ul>
             </div>
-            <div id="logo">
-                <a href='.'>The Big Lebowski</a>
-            </div>
-        </header>
+        </nav>
 
         <section id="body">
             <h1>Contact Us</h1>
