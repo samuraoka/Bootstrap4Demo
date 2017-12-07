@@ -47,19 +47,18 @@
                         <label class="btn btn-success @(Model.Favorite.Equals("maude") ? "active" : "")">
                             Maude<input type="radio" asp-for="Favorite" value="maude" />
                         </label>
-                    </div>
-
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button"
-                                id="dropdownMenuButton" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                            Show Me
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Walter</a>
-                            <a class="dropdown-item" href="#">Bunny</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item disabled" href="#">The Big Lebowski</a>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-success dropdown-toggle"
+                                    id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                Other
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Walter</a>
+                                <a class="dropdown-item" href="#">Bunny</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item disabled" href="#">The Big Lebowski</a>
+                            </div>
                         </div>
                     </div>
                 </div>
