@@ -15,6 +15,15 @@ namespace Bootstrap4Demo.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Contact()
+        {
+            var model = new ContactViewModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Contact(ContactViewModel model)
         {
             return View(model);
