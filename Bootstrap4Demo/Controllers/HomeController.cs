@@ -10,8 +10,11 @@ namespace Bootstrap4Demo.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult About(int id)
         {
+            ViewData["pg-number"] = id < 1 || 3 < id ? 1 : id;
+            ViewData["pg-previsou-enabled"] = ((int)ViewData["pg-number"]) == 1 ? "disabled" : "";
+            ViewData["pg-next-enabled"] = ((int)ViewData["pg-number"]) == 3 ? "disabled" : "";
             return View();
         }
 
