@@ -14,8 +14,9 @@ namespace Bootstrap4Demo.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Contact(string favorite)
         {
+            ViewData["favorite"] = favorite ?? "";
             return View();
         }
 

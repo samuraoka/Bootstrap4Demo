@@ -34,6 +34,20 @@
                            placeholder="e.g. Your Email" />
                 </div>
                 <div class="form-group">
+                    <label class="mr-3">Favorite</label><br />
+                    <div class="btn-group btn-group-sm" data-toggle="buttons" role="group" aria-label="Favorite Characters">
+                        <label class="btn btn-success @(ViewData["favorite"].Equals("dude") ? "active" : "")">
+                            The Dude<input type="radio" name="favorite" value="dude" @(ViewData["favorite"].Equals("dude") ? "checked" : "") />
+                        </label>
+                        <label class="btn btn-success @(ViewData["favorite"].Equals("donny") ? "active" : "")">
+                            Donny<input type="radio" name="favorite" value="donny" @(ViewData["favorite"].Equals("donny") ? "active" : "") />
+                        </label>
+                        <label class="btn btn-success @(ViewData["favorite"].Equals("maude") ? "active" : "")">
+                            Maude<input type="radio" name="favorite" value="maude" @(ViewData["favorite"].Equals("maude") ? "active" : "") />
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="reasonInput">Reason</label>
                     <select id="reasonInput" class="form-control" name="reasonInput">
                         <option>Adoration</option>
