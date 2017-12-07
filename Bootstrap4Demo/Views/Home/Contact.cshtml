@@ -46,6 +46,20 @@
                             Maude<input type="radio" name="favorite" value="maude" @(ViewData["favorite"].Equals("maude") ? "active" : "") />
                         </label>
                     </div>
+
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Show Me
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Walter</a>
+                            <a class="dropdown-item" href="#">Bunny</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item disabled" href="#">The Big Lebowski</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="reasonInput">Reason</label>
