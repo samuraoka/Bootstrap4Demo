@@ -54,10 +54,16 @@
                                 Other
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Walter</a>
-                                <a class="dropdown-item" href="#">Bunny</a>
+                                <label class="dropdown-item btn btn-success @(Model.Favorite.Equals("walter") ? "active" : "")">
+                                    Walter<input type="radio" asp-for="Favorite" value="walter" style="display: none" />
+                                </label>
+                                <label class="dropdown-item btn btn-success @(Model.Favorite.Equals("bunny") ? "active" : "")">
+                                    Bunny<input type="radio" asp-for="Favorite" value="bunny" style="display: none" />
+                                </label>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item disabled" href="#">The Big Lebowski</a>
+                                <label class="dropdown-item disabled btn btn-success @(Model.Favorite.Equals("lebowski") ? "active" : "")">
+                                    The Big Lebowski<input type="radio" asp-for="Favorite" value="lebowski" style="display: none" />
+                                </label>
                             </div>
                         </div>
                     </div>
