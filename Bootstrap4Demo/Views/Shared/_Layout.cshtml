@@ -22,9 +22,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a asp-action="Index" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a asp-action="About" class="nav-link">About</a></li>
-                    <li class="nav-item mr-3"><a asp-action="Contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item @(ViewData["index-active"])">
+                        <a asp-action="Index" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item @(ViewData["about-active"])">
+                        <a asp-action="About" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item mr-3 @(ViewData["contact-active"])">
+                        <a asp-action="Contact" class="nav-link">Contact</a>
+                    </li>
                     <li class="nav-item"><a class="btn btn-outline-dark">Login</a></li>
                 </ul>
             </div>
