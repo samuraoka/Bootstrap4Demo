@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Bootstrap4Demo.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Bootstrap4Demo.Controllers
 {
@@ -14,10 +15,9 @@ namespace Bootstrap4Demo.Controllers
             return View();
         }
 
-        public IActionResult Contact(string favorite)
+        public IActionResult Contact(ContactViewModel model)
         {
-            ViewData["favorite"] = favorite ?? "";
-            return View();
+            return View(model);
         }
 
     }

@@ -1,5 +1,7 @@
-﻿
+﻿@model Bootstrap4Demo.Models.ContactViewModel
+
 @{
+    // used in the Shared/_Layout.cshtml
     ViewData["contact-active"] = "active";
 }
 
@@ -21,14 +23,14 @@
             <div>
                 <div class="form-group">
                     <label for="nameInput">Your Name</label>
-                    <input id="nameInput" name="nameInput"
+                    <input id="nameInput" asp-for="Name"
                            type="text"
                            class="form-control"
                            placeholder="e.g. Your Name" />
                 </div>
                 <div class="form-group">
                     <label for="emailInput">Email</label>
-                    <input id="emailInput" name="emailInput"
+                    <input id="emailInput" asp-for="Email"
                            type="email"
                            class="form-control"
                            placeholder="e.g. Your Email" />
@@ -36,14 +38,14 @@
                 <div class="form-group">
                     <label class="mr-3">Favorite</label><br />
                     <div class="btn-group btn-group-sm" data-toggle="buttons" role="group" aria-label="Favorite Characters">
-                        <label class="btn btn-success @(ViewData["favorite"].Equals("dude") ? "active" : "")">
-                            The Dude<input type="radio" name="favorite" value="dude" @(ViewData["favorite"].Equals("dude") ? "checked" : "") />
+                        <label class="btn btn-success @(Model.Favorite.Equals("dude") ? "active" : "")">
+                            The Dude<input type="radio" asp-for="Favorite" value="dude" />
                         </label>
-                        <label class="btn btn-success @(ViewData["favorite"].Equals("donny") ? "active" : "")">
-                            Donny<input type="radio" name="favorite" value="donny" @(ViewData["favorite"].Equals("donny") ? "active" : "") />
+                        <label class="btn btn-success @(Model.Favorite.Equals("donny") ? "active" : "")">
+                            Donny<input type="radio" asp-for="Favorite" value="donny" />
                         </label>
-                        <label class="btn btn-success @(ViewData["favorite"].Equals("maude") ? "active" : "")">
-                            Maude<input type="radio" name="favorite" value="maude" @(ViewData["favorite"].Equals("maude") ? "active" : "") />
+                        <label class="btn btn-success @(Model.Favorite.Equals("maude") ? "active" : "")">
+                            Maude<input type="radio" asp-for="Favorite" value="maude" />
                         </label>
                     </div>
 
@@ -63,7 +65,7 @@
                 </div>
                 <div class="form-group">
                     <label for="reasonInput">Reason</label>
-                    <select id="reasonInput" class="form-control" name="reasonInput">
+                    <select id="reasonInput" class="form-control" asp-for="Reason">
                         <option>Adoration</option>
                         <option>Ordering a White Russian</option>
                         <option>Complaint</option>
@@ -72,7 +74,7 @@
                 </div>
                 <div class="form-group">
                     <label for="messageInput">Message</label>
-                    <textarea id="messageInput" name="messageInput"
+                    <textarea id="messageInput" asp-for="Message"
                               cols="40" rows="6"
                               class="form-control"
                               placeholder="e.g. The Message"></textarea>
