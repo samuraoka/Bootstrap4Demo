@@ -2,44 +2,52 @@
 @{
     ViewData["contact-active"] = "active";
 }
-<section id="body">
-    <h1>Contact Us</h1>
-    <p>This doesn't really work, but it's an example of a form. Easy, man. Relax, man.</p>
-    <form class="col-md-8">
-        <div>
-            <div class="form-group">
-                <label for="nameInput">Your Name</label>
-                <input id="nameInput" name="nameInput"
-                       type="text"
-                       class="form-control"
-                       placeholder="e.g. Your Name" />
+
+<section id="body" class="container">
+
+    <div class="my-5">
+        <h1>Contact Us</h1>
+        <p>This doesn't really work, but it's an example of a form. Easy, man. Relax, man.</p>
+    </div>
+
+    <div class="row my-4">
+        <form class="col-md-8">
+            <div>
+                <div class="form-group">
+                    <label for="nameInput">Your Name</label>
+                    <input id="nameInput" name="nameInput"
+                           type="text"
+                           class="form-control"
+                           placeholder="e.g. Your Name" />
+                </div>
+                <div class="form-group">
+                    <label for="emailInput">Email</label>
+                    <input id="emailInput" name="emailInput"
+                           type="email"
+                           class="form-control"
+                           placeholder="e.g. Your Email" />
+                </div>
+                <div class="form-group">
+                    <label for="reasonInput">Reason</label>
+                    <select id="reasonInput" class="form-control" name="reasonInput">
+                        <option>Adoration</option>
+                        <option>Ordering a White Russian</option>
+                        <option>Complaint</option>
+                        <option>I am lost</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="messageInput">Message</label>
+                    <textarea id="messageInput" name="messageInput"
+                              cols="40" rows="6"
+                              class="form-control"
+                              placeholder="e.g. The Message"></textarea>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-success" />
             </div>
-            <div class="form-group">
-                <label for="emailInput">Email</label>
-                <input id="emailInput" name="emailInput"
-                       type="email"
-                       class="form-control"
-                       placeholder="e.g. Your Email" />
-            </div>
-            <div class="form-group">
-                <label for="reasonInput">Reason</label>
-                <select id="reasonInput" class="form-control" name="reasonInput">
-                    <option>Adoration</option>
-                    <option>Ordering a White Russian</option>
-                    <option>Complaint</option>
-                    <option>I am lost</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="messageInput">Message</label>
-                <textarea id="messageInput" name="messageInput"
-                          cols="40" rows="6"
-                          class="form-control"
-                          placeholder="e.g. The Message"></textarea>
-            </div>
-            <input type="submit" value="Submit" class="btn btn-success" />
-        </div>
-    </form>
+        </form>
+    </div>
+
     <h3>Our fake address</h3>
     <div>
         <address>
