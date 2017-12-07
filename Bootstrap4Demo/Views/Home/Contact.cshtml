@@ -55,14 +55,14 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <label class="dropdown-item btn btn-success @(Model.Favorite.Equals("walter") ? "active" : "")">
-                                    Walter<input type="radio" asp-for="Favorite" value="walter" style="display: none" />
+                                    Walter<input type="radio" asp-for="Favorite" value="walter" class="d-none" />
                                 </label>
                                 <label class="dropdown-item btn btn-success @(Model.Favorite.Equals("bunny") ? "active" : "")">
-                                    Bunny<input type="radio" asp-for="Favorite" value="bunny" style="display: none" />
+                                    Bunny<input type="radio" asp-for="Favorite" value="bunny" class="d-none" />
                                 </label>
                                 <div class="dropdown-divider"></div>
                                 <label class="dropdown-item disabled btn btn-success @(Model.Favorite.Equals("lebowski") ? "active" : "")">
-                                    The Big Lebowski<input type="radio" asp-for="Favorite" value="lebowski" style="display: none" />
+                                    The Big Lebowski<input type="radio" asp-for="Favorite" value="lebowski" class="d-none disabled" />
                                 </label>
                             </div>
                         </div>
@@ -70,12 +70,20 @@
                 </div>
                 <div class="form-group">
                     <label for="reasonInput">Reason</label>
-                    <select id="reasonInput" class="form-control" asp-for="Reason">
-                        <option>Adoration</option>
-                        <option>Ordering a White Russian</option>
-                        <option>Complaint</option>
-                        <option>I am lost</option>
-                    </select>
+                    <div class="dropdown">
+                        <div class="btn-group">
+                            <input type="hidden" id="reasonInput" asp-for="Reason" />
+                            <button type="button" id="pickReason" class="btn btn-success">Pick One</button>
+                            <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                            <div id="reasonDropdown" class="dropdown-menu" aria-labelledby="pickReason">
+                                <a class="dropdown-item">Adoration</a>
+                                <a class="dropdown-item">Ordering a White Russian</a>
+                                <a class="dropdown-item">Complaint</a>
+                                <a class="dropdown-item">I am lost</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="messageInput">Message</label>
