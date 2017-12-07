@@ -1,6 +1,7 @@
 ﻿body {
     margin-top: 7.5rem;
-}
+    overflow-y: scroll;
+} 
 
 /*@import url(http://fonts.googleapis.com/css?family=Vollkorn:700italic);
 
