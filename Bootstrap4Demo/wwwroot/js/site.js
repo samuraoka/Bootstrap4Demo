@@ -66,3 +66,14 @@
         delay: { show: 500, hide: 100 }
     });
 })();
+
+(function () {
+    // Via JavaScript - Carousel
+    // https://getbootstrap.com/docs/4.0/components/carousel/#via-javascript
+    //
+    // Options - Carousel
+    // https://getbootstrap.com/docs/4.0/components/carousel/#options
+    $("#theCarousel").carousel({
+        interval: 3000
+    });
+})();

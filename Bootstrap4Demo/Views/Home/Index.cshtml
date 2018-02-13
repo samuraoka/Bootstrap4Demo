@@ -16,12 +16,30 @@
         <p class="text-muted">Way out west there was this fella... fella I wanna tell ya about.</p>
     </div>
 
+    @*
+        Carousel
+        https://getbootstrap.com/docs/4.0/components/carousel/
+    *@
     <section class="row justify-content-center d-none d-md-flex my-4">
-        <img src="images/carousel-1.jpg" alt="1" class="col-3" />
-        <img src="images/carousel-2.jpg" alt="2" class="col-3" />
-        <img src="images/carousel-3.jpg" alt="3" class="col-3" />
-        <img src="images/carousel-4.jpg" alt="4" class="col-3" />
+        <div id="theCarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/carousel-1.jpg" alt="1" class="img-fluid" />
+                </div>
+                <div class="carousel-item">
+                    <img src="images/carousel-2.jpg" alt="2" class="img-fluid" />
+                </div>
+                <div class="carousel-item">
+                    <img src="images/carousel-3.jpg" alt="3" class="img-fluid" />
+                </div>
+                <div class="carousel-item">
+                    <img src="images/carousel-4.jpg" alt="4" class="img-fluid" />
+                </div>
+            </div>
+        </div>
     </section>
+
+    <hr />
 
     <div class="row">
         <section id="main" class="col-md-8">
