@@ -18,108 +18,137 @@
         <p>This doesn't really work, but it's an example of a form. Easy, man. Relax, man.</p>
     </div>
 
-    <div asp-validation-summary="All"></div>
+    @*
+        Tabs - Navs
+        https://getbootstrap.com/docs/4.0/components/navs/#tabs
+    *@
+    <ul class="nav nav-tabs nav-fill bg-light" id="contactTabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="formTabLabel" data-toggle="tab"
+               href="#formTab" role="tab" aria-controls="formTab"
+               aria-selected="true">Contact Form</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="addressTabLabel" data-toggle="tab"
+            href="#addressTab" role="tab" aria-controls="addressTab"
+            aria-selected="false">Address</a>
+        </li>
+    </ul>
 
-    <div class="row my-4">
-        <form id="contactForm" asp-action="Contact" class="col-md-8">
-            <div>
-                <div class="form-group">
-                    <label for="nameInput" asp-for="Name"></label>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <span class="oi oi-text"></span>
-                        </span>
-                        <input type="text" id="nameInput" asp-for="Name"
-                               class="form-control" placeholder="e.g. Your Name" />
-                        <span class="input-group-addon text-warning"><b>!</b></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="emailInput" asp-for="Email"></label>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <span class="oi oi-envelope-closed"></span>
-                        </span>
-                        <input type="email" id="emailInput" asp-for="Email"
-                               class="form-control" placeholder="e.g. Your Email" />
-                        <span class="input-group-addon text-warning"><b>!</b></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="mr-3">Favorite</label><br />
-                    <div class="btn-group btn-group-sm" data-toggle="buttons" role="group" aria-label="Favorite Characters">
-                        <label class="btn btn-success @(Model.Favorite.Equals("dude") ? "active" : "")">
-                            The Dude<input type="radio" asp-for="Favorite" value="dude" />
-                        </label>
-                        <label class="btn btn-success @(Model.Favorite.Equals("donny") ? "active" : "")">
-                            Donny<input type="radio" asp-for="Favorite" value="donny" />
-                        </label>
-                        <label class="btn btn-success @(Model.Favorite.Equals("maude") ? "active" : "")">
-                            Maude<input type="radio" asp-for="Favorite" value="maude" />
-                        </label>
-                        <div class="btn-group btn-group-sm" role="group">
-                            <button type="button" class="btn btn-success dropdown-toggle"
-                                    id="dropdownMenuButton" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                Other
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <label class="dropdown-item btn btn-success @(Model.Favorite.Equals("walter") ? "active" : "")">
-                                    Walter<input type="radio" asp-for="Favorite" value="walter" class="d-none" />
-                                </label>
-                                <label class="dropdown-item btn btn-success @(Model.Favorite.Equals("bunny") ? "active" : "")">
-                                    Bunny<input type="radio" asp-for="Favorite" value="bunny" class="d-none" />
-                                </label>
-                                <div class="dropdown-divider"></div>
-                                <label class="dropdown-item disabled btn btn-success @(Model.Favorite.Equals("lebowski") ? "active" : "")">
-                                    The Big Lebowski<input type="radio" asp-for="Favorite" value="lebowski" class="d-none disabled" />
-                                </label>
+    <div class="tab-content" id="contactTabContents">
+        <div class="tab-pane fade card px-3 show active" id="formTab"
+             role="tabpanel" aria-labelledby="formTabLabel">
+            <div class="my-4">
+                <div asp-validation-summary="All"></div>
+
+                <div class="row my-4">
+                    <form id="contactForm" asp-action="Contact" class="col-md-8">
+                        <div>
+                            <div class="form-group">
+                                <label for="nameInput" asp-for="Name"></label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="oi oi-text"></span>
+                                    </span>
+                                    <input type="text" id="nameInput" asp-for="Name"
+                                           class="form-control" placeholder="e.g. Your Name" />
+                                    <span class="input-group-addon text-warning"><b>!</b></span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="reasonInput">Reason</label>
-                    <div class="dropdown">
-                        <div class="btn-group">
-                            <input type="hidden" id="reasonInput" asp-for="Reason" />
-                            <button type="button" id="pickReason" class="btn btn-success">Pick One</button>
-                            <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                            <div id="reasonDropdown" class="dropdown-menu" aria-labelledby="pickReason">
-                                <a class="dropdown-item">Adoration</a>
-                                <a class="dropdown-item">Ordering a White Russian</a>
-                                <a class="dropdown-item">Complaint</a>
-                                <a class="dropdown-item">I am lost</a>
+                            <div class="form-group">
+                                <label for="emailInput" asp-for="Email"></label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="oi oi-envelope-closed"></span>
+                                    </span>
+                                    <input type="email" id="emailInput" asp-for="Email"
+                                           class="form-control" placeholder="e.g. Your Email" />
+                                    <span class="input-group-addon text-warning"><b>!</b></span>
+                                </div>
                             </div>
+                            <div class="form-group">
+                                <label class="mr-3">Favorite</label><br />
+                                <div class="btn-group btn-group-sm" data-toggle="buttons" role="group" aria-label="Favorite Characters">
+                                    <label class="btn btn-success @(Model.Favorite.Equals("dude") ? "active" : "")">
+                                        The Dude<input type="radio" asp-for="Favorite" value="dude" />
+                                    </label>
+                                    <label class="btn btn-success @(Model.Favorite.Equals("donny") ? "active" : "")">
+                                        Donny<input type="radio" asp-for="Favorite" value="donny" />
+                                    </label>
+                                    <label class="btn btn-success @(Model.Favorite.Equals("maude") ? "active" : "")">
+                                        Maude<input type="radio" asp-for="Favorite" value="maude" />
+                                    </label>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-success dropdown-toggle"
+                                                id="dropdownMenuButton" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                            Other
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <label class="dropdown-item btn btn-success @(Model.Favorite.Equals("walter") ? "active" : "")">
+                                                Walter<input type="radio" asp-for="Favorite" value="walter" class="d-none" />
+                                            </label>
+                                            <label class="dropdown-item btn btn-success @(Model.Favorite.Equals("bunny") ? "active" : "")">
+                                                Bunny<input type="radio" asp-for="Favorite" value="bunny" class="d-none" />
+                                            </label>
+                                            <div class="dropdown-divider"></div>
+                                            <label class="dropdown-item disabled btn btn-success @(Model.Favorite.Equals("lebowski") ? "active" : "")">
+                                                The Big Lebowski<input type="radio" asp-for="Favorite" value="lebowski" class="d-none disabled" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reasonInput">Reason</label>
+                                <div class="dropdown">
+                                    <div class="btn-group">
+                                        <input type="hidden" id="reasonInput" asp-for="Reason" />
+                                        <button type="button" id="pickReason" class="btn btn-success">Pick One</button>
+                                        <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div id="reasonDropdown" class="dropdown-menu" aria-labelledby="pickReason">
+                                            <a class="dropdown-item">Adoration</a>
+                                            <a class="dropdown-item">Ordering a White Russian</a>
+                                            <a class="dropdown-item">Complaint</a>
+                                            <a class="dropdown-item">I am lost</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="messageInput">Message</label>
+                                <textarea id="messageInput" asp-for="Message"
+                                          cols="40" rows="6"
+                                          class="form-control"
+                                          placeholder="e.g. The Message"></textarea>
+                            </div>
+                            <input type="submit" value="Submit" class="btn btn-success" />
                         </div>
-                    </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="messageInput">Message</label>
-                    <textarea id="messageInput" asp-for="Message"
-                              cols="40" rows="6"
-                              class="form-control"
-                              placeholder="e.g. The Message"></textarea>
-                </div>
-                <input type="submit" value="Submit" class="btn btn-success" />
             </div>
-        </form>
-    </div>
+        </div>
 
-    <h3>Our fake address</h3>
-    <div>
-        <address>
-            Big Lebowski Fan Page<br />
-            123 Main Street<br />
-            Rug Ties The Room Together, CA 98765<br />
-            <abbr title="Phone">P:</abbr>
-            425.555.0100
-        </address>
-        <address>
-            <strong>Support:</strong>   <a href="mailto:Support@fakelebowskifansite.com">Support@fakelebowskifansite.com</a><br />
-            <strong>Marketing:</strong> <a href="mailto:Marketing@fakelebowskifansite.com">Marketing@fakelebowskifansite.com</a>
-        </address>
+        <div class="tab-pane fade card px-3" id="addressTab"
+             role="tabpanel" aria-label="addressTabLabel">
+            <div class="my-4">
+                <h3>Our fake address</h3>
+                <div>
+                    <address>
+                        Big Lebowski Fan Page<br />
+                        123 Main Street<br />
+                        Rug Ties The Room Together, CA 98765<br />
+                        <abbr title="Phone">P:</abbr>
+                        425.555.0100
+                    </address>
+                    <address>
+                        <strong>Support:</strong>   <a href="mailto:Support@fakelebowskifansite.com">Support@fakelebowskifansite.com</a><br />
+                        <strong>Marketing:</strong> <a href="mailto:Marketing@fakelebowskifansite.com">Marketing@fakelebowskifansite.com</a>
+                    </address>
+                </div>
+            </div>
+        </div>
     </div>
 
     @*
