@@ -159,18 +159,31 @@
         </div>
     </div>
 
-    <nav class="nav nav-pills bg-light font-weight-bold">
-        <a class="nav-item nav-link bg-danger" data-toggle="collapse" href="#attributions"
+    @*
+        Collapse
+        https://getbootstrap.com/docs/4.0/components/collapse/
+
+        Navs
+        https://getbootstrap.com/docs/4.0/components/navs/
+
+        Background color - Colors
+        https://getbootstrap.com/docs/4.0/utilities/colors/#background-color
+
+        Font weight and italics - Text
+        https://getbootstrap.com/docs/4.0/utilities/text/#font-weight-and-italics
+    *@
+    <nav class="nav font-weight-bold bg-light">
+        <a class="nav-item nav-link bg-light" data-toggle="collapse" href="#attributions"
            role="button" aria-expanded="false" aria-controls="attributions">
             Attributions
         </a>
-        <a class="nav-link nav-link bg-danger" data-toggle="collapse" href="#pics"
+        <a class="nav-link nav-link bg-light" data-toggle="collapse" href="#pics"
            role="button" aria-expanded="false" aria-controls="pics">
             Pictures
         </a>
     </nav>
 
-    <div id="attributions" class="collapse show">
+    <div id="attributions" class="collapse show mt-5">
         <div class="row">
             <div class="col-6">
                 <h3>Photo Attributions</h3>
@@ -242,7 +255,7 @@
         </div>
     </div>
 
-    <div id="pics" class="collapse">
+    <div id="pics" class="collapse mt-5">
         <div class="row mt-5">
             <div class="col-md-4 col-sm-6">
                 <div class="card border">
