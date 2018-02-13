@@ -317,5 +317,66 @@
             </div>
         </div>
     </div>
+
+    <hr />
+
+    @*
+        Accordion example - Collapse
+        https://getbootstrap.com/docs/4.0/components/collapse/#accordion-example
+    *@
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingFirst">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse"
+                            data-target="#collapseFirst" aria-expanded="true"
+                            aria-controls="collapseFirst">
+                        First Collapse #1
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFirst" class="collapse show"
+                 aria-labelledby="headingFirst" data-parent="#accordion">
+                <div class="card-body">
+                    <img src="~/images/lebowski-1.jpg" alt="1" />
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingSecond">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseSecond" aria-expanded="false"
+                            aria-controls="collapseSecond">
+                        Second Collapse #2
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseSecond" class="collapse"
+                 aria-labelledby="headingSecond" data-parent="#accordion">
+                <div class="card-body">
+                    <img src="~/images/lebowski-2.jpg" alt="2" />
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThird">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseThird" aria-expanded="false"
+                            aria-controls="collapseThird">
+                        Third Collapse #3
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThird" class="collapse"
+                 aria-labelledby="headingThird" data-parent="#accordion">
+                <div class="card-body">
+                    <img src="~/images/lebowski-3.jpg" alt="3" />
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 
