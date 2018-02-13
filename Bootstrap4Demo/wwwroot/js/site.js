@@ -47,3 +47,15 @@
         window.alert("The modal dialog has been hidden.");
     });
 })();
+
+(function () {
+    // Example: Enable tooltips everywhere - Tooltips
+    // https://getbootstrap.com/docs/4.0/components/tooltips/#example-enable-tooltips-everywhere
+    //
+    // Options - Tooltips
+    // https://getbootstrap.com/docs/4.0/components/tooltips/#options
+    $("#contactForm input[type=submit]").tooltip({
+        placement: "right",
+        delay: { show: 500, hide: 100 }
+    });
+})();
