@@ -41,10 +41,17 @@
         return false;
     });
 
-    // Events
+    // Events - Modal Dialog
     // https://getbootstrap.com/docs/4.0/components/modal/#events
+    var sentAlert = $("#sentAlert");
     $("#sentDialog").on("hidden.bs.modal", function () {
-        window.alert("The modal dialog has been hidden.");
+        sentAlert.show("slow");
+    });
+
+    // Events - Alerts
+    sentAlert.on("close.bs.alert", function () {
+        sentAlert.hide("slow");
+        return false;
     });
 })();
 
