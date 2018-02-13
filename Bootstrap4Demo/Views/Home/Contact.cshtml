@@ -21,7 +21,7 @@
     <div asp-validation-summary="All"></div>
 
     <div class="row my-4">
-        <form asp-action="Contact" class="col-md-8">
+        <form id="contactForm" asp-action="Contact" class="col-md-8">
             <div>
                 <div class="form-group">
                     <label for="nameInput" asp-for="Name"></label>
@@ -103,9 +103,6 @@
                               placeholder="e.g. The Message"></textarea>
                 </div>
                 <input type="submit" value="Submit" class="btn btn-success" />
-                <a href="#sentDialog" class="btn btn-success" data-toggle="modal">
-                    Show Dialog...
-                </a>
             </div>
         </form>
     </div>

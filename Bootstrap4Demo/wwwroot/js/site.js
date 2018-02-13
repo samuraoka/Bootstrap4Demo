@@ -11,7 +11,7 @@
 
     $("#reasonDropdown a").on("click", function () {
         var reason = $(this).text();
-        $inputReason.val(reason)
+        $inputReason.val(reason);
         $pickReason.text(reason);
     });
 
@@ -26,4 +26,24 @@
         $("#pickReason").text($inputReason);
     }
 
+})();
+
+(function () {
+    "use strict";
+
+    // .submit()
+    // http://api.jquery.com/submit/
+    //
+    // Via JavaScript
+    // https://getbootstrap.com/docs/4.0/components/modal/#via-javascript
+    $("#contactForm").on("submit", function () {
+        $("#sentDialog").modal("show");
+        return false;
+    });
+
+    // Events
+    // https://getbootstrap.com/docs/4.0/components/modal/#events
+    $("#sentDialog").on("hidden.bs.modal", function () {
+        window.alert("The modal dialog has been hidden.");
+    });
 })();
