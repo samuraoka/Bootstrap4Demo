@@ -24,64 +24,50 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/style.min.css" />
     <link rel="stylesheet" href="/css/style-menu.min.css" />
-    <link rel="stylesheet" href="/css/style_responsive.css" />
+    <!--<link rel="stylesheet" href="/css/style_responsive.css" />-->
     <link rel="stylesheet" href="/css/site.min.css" />
 
 </head>
 
 <body>
-    <!--=== Top ===-->
-    <div id="top">
-        <div class="container">
-        </div>
-    </div>
-    <!--/top-->
     <!--=== Header ===-->
-    <div id="header">
-        <div class="container">
+    <div id="header" class="container">
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <!-- Logo -->
             <div id="logo">
                 <a href="/">Shawn Wildermuth</a>
                 <div class="sublogo">The Raving Rants of a software guy...</div>
             </div>
             <!-- /logo -->
-            <!-- Menu -->
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <!-- /nav-collapse -->
-                    <div class="nav-collapse collapse">
-                        <ul class="nav top-2">
-                            <li class='active'>
-                                <a href='/'>Home</a>
-                            </li>
-                            <li>
-                                <a href="http://wildermuth.com/Books">Books</a>
-                            </li>
-                            <li>
-                                <a href="http://wildermuth.com/Articles">Articles</a>
-                            </li>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- /nav-collapse -->
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav top-2 ml-auto">
+                    <li class='nav-item active'>
+                        <a class="nav-link" href='/'>Home</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" href="http://wildermuth.com/Books">Books</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" href="http://wildermuth.com/Articles">Articles</a>
+                    </li>
 
-                            <li>
-                                <a href="http://wildermuth.com/Apps">Apps</a>
-                            </li>
-                            <li>
-                                <a href="http://wildermuth.com/contact">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /nav-collapse -->
-                </div>
-                <!-- /navbar-inner -->
+                    <li class='nav-item'>
+                        <a class="nav-link" href="http://wildermuth.com/Apps">Apps</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" href="http://wildermuth.com/contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <!-- /navbar -->
-
-        </div>
-        <!-- /container -->
+            <!-- /nav-collapse -->
+        </nav>
+        <!-- /navbar -->
     </div>
     <!-- /header -->
     <!--=== Content part ===-->
