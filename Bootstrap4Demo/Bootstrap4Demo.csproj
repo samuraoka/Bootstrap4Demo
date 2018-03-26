@@ -13,6 +13,6 @@
     <Folder Include="wwwroot\fonts\" />
   </ItemGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="copy $(ProjectDir)node_modules\bootstrap\dist\css\bootstrap* $(ProjectDir)wwwroot\css&#xD;&#xA;copy $(ProjectDir)node_modules\open-iconic\font\css\open-iconic-bootstrap* $(ProjectDir)wwwroot\css&#xD;&#xA;copy $(ProjectDir)node_modules\open-iconic\font\fonts\open-iconic* $(ProjectDir)wwwroot\fonts&#xD;&#xA;copy $(ProjectDir)node_modules\bootstrap\dist\js\bootstrap* $(ProjectDir)wwwroot\js&#xD;&#xA;copy $(ProjectDir)node_modules\jquery\dist\jquery* $(ProjectDir)wwwroot\js&#xD;&#xA;copy $(ProjectDir)node_modules\popper.js\dist\umd\popper* $(ProjectDir)wwwroot\js&#xD;&#xA;" />
+    <Exec Command="copy $(ProjectDir)node_modules\bootstrap\dist\css\bootstrap.* $(ProjectDir)wwwroot\css&#xD;&#xA;copy $(ProjectDir)node_modules\open-iconic\font\css\open-iconic-bootstrap* $(ProjectDir)wwwroot\css&#xD;&#xA;copy $(ProjectDir)node_modules\open-iconic\font\fonts\open-iconic* $(ProjectDir)wwwroot\fonts&#xD;&#xA;copy $(ProjectDir)node_modules\bootstrap\dist\js\bootstrap* $(ProjectDir)wwwroot\js&#xD;&#xA;copy $(ProjectDir)node_modules\jquery\dist\jquery* $(ProjectDir)wwwroot\js&#xD;&#xA;copy $(ProjectDir)node_modules\popper.js\dist\umd\popper* $(ProjectDir)wwwroot\js&#xD;&#xA;" />
   </Target>
 </Project>

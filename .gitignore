@@ -264,8 +264,11 @@ __pycache__/
 /Bootstrap4Demo/wwwroot/css/bootstrap-reboot*
 /Bootstrap4Demo/wwwroot/css/bootstrap.css*
 /Bootstrap4Demo/wwwroot/css/bootstrap.min*
+/Bootstrap4Demo/wwwroot/css/open-iconic-bootstrap*
+/Bootstrap4Demo/wwwroot/css/bootstrap-darky.min.css
+/Bootstrap4Demo/wwwroot/fonts/open-iconic*
 /Bootstrap4Demo/wwwroot/js/bootstrap*
 /Bootstrap4Demo/wwwroot/js/jquery*
 /Bootstrap4Demo/wwwroot/js/popper*
-/Bootstrap4Demo/wwwroot/css/open-iconic-bootstrap*
-/Bootstrap4Demo/wwwroot/fonts/open-iconic*
+/Bootstrap4Demo/wwwroot/js/site.min.js
+/Bootstrap4Demo/wwwroot/css/site.min.css
