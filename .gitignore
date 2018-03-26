@@ -259,3 +259,13 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/Bootstrap4Demo/wwwroot/lib
+/Bootstrap4Demo/wwwroot/css/bootstrap-grid*
+/Bootstrap4Demo/wwwroot/css/bootstrap-reboot*
+/Bootstrap4Demo/wwwroot/css/bootstrap.css*
+/Bootstrap4Demo/wwwroot/css/bootstrap.min*
+/Bootstrap4Demo/wwwroot/js/bootstrap*
+/Bootstrap4Demo/wwwroot/js/jquery*
+/Bootstrap4Demo/wwwroot/js/popper*
+/Bootstrap4Demo/wwwroot/css/open-iconic-bootstrap*
+/Bootstrap4Demo/wwwroot/fonts/open-iconic*

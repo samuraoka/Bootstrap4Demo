@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Big Lebowski</title>
-    <link rel="stylesheet" href="~/lib/open-iconic/font/css/open-iconic-bootstrap.css" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/open-iconic-bootstrap.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/bootstrap-darky.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -45,12 +45,16 @@
         </footer>
     </div>
 
-    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/jquery.js"></script>
     @*
         Overview - Tooltips
         https://getbootstrap.com/docs/4.0/components/tooltips/#overview
+
+        Angular 4 Bootstrap dropdown require Popper.js
+        https://stackoverflow.com/questions/45680644/angular-4-bootstrap-dropdown-require-popper-js
     *@
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.js"></script>
     <script src="~/js/site.js"></script>
 </body>
 </html>
