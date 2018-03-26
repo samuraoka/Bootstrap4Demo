@@ -21,12 +21,11 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ShawnWildermuth" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style-menu.css">
-    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
-    <link rel="stylesheet" href="/css/style_responsive.css">
-    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.min.css" />
+    <link rel="stylesheet" href="/css/style-menu.min.css" />
+    <link rel="stylesheet" href="/css/style_responsive.css" />
+    <link rel="stylesheet" href="/css/site.min.css" />
 
 </head>
 
@@ -95,9 +94,9 @@
         </div>
         <!--/breadcrumbs-->
         <div class="container">
-            <div class="row-fluid blog-page">
+            <div class="row blog-page">
                 <!-- Left Sidebar -->
-                <div class="span9">
+                <div class="col-md-9">
 
 
                     <div class="pagination pagination-right pagination-small">
@@ -436,14 +435,14 @@
                 </div>
 
                 <!-- Right Sidebar -->
-                <div class="span3">
+                <div class="col-md-3">
                     <!-- Search Bar -->
                     <div class="headline">
                         <h3>Search Blog</h3>
                     </div>
                     <div class="input-append">
                         <form id="search-view-form" method="get" action="#">
-                            <input type="text" id="search-view-input" class="span9 border-radius-none">
+                            <input type="text" id="search-view-input" class="col-md-9 border-radius-none">
                             <input type="submit" class="btn-u" id="search-view-submit" value="Search" />
                         </form>
                     </div>
@@ -540,10 +539,10 @@
                         </li>
                     </ul>
                 </div>
-                <!--/span3-->
+                <!--/col-md-3-->
 
             </div>
-            <!--/row-fluid-->
+            <!--/row-->
 
         </div>
         <!--/container-->
@@ -554,8 +553,8 @@
     <div class="footer">
         <div class="container">
 
-            <div class="row-fluid">
-                <div class="span4">
+            <div class="row">
+                <div class="col-sm-4">
                     <!-- About -->
                     <div class="headline">
                         <h3>About</h3>
@@ -564,9 +563,9 @@
                         Shawn Wildermuth is a ten-time Microsoft MVP (ASP.NET/IIS) and is involved with Microsoft as a Data Insider and ASP.NET Insider. He is also the author of seven books and dozens of articles on software development. He is one of the <a href='http://wilderminds.com' target="_blank">Wilder Minds</a>.
                     </p>
                 </div>
-                <!--/span4-->
+                <!--/col-sm-4-->
 
-                <div class="span4">
+                <div class="col-sm-4">
                     <div class="posts">
                         <div class="headline">
                             <h3>Open Source Projects</h3>
@@ -597,9 +596,9 @@
                         </dl>
                     </div>
                 </div>
-                <!--/span4-->
+                <!--/col-sm-4-->
 
-                <div class="span4">
+                <div class="col-sm-4">
 
                     <!-- Stay Connected -->
                     <div class="headline">
@@ -629,9 +628,9 @@
                         </li>
                     </ul>
                 </div>
-                <!--/span4-->
+                <!--/col-sm-4-->
             </div>
-            <!--/row-fluid-->
+            <!--/row-->
 
         </div>
         <!--/container-->
@@ -641,24 +640,24 @@
     <div class="copyright">
         <div class="container">
 
-            <div class="row-fluid">
-                <div class="span8">
+            <div class="row">
+                <div class="col-md-8">
                     <p>2001-2013 &copy; Shawn Wildermuth. ALL Rights Reserved.</p>
                 </div>
             </div>
-            <!--/row-fluid-->
+            <!--/row-->
 
         </div>
         <!--/container-->
     </div>
     <!--/copyright-->
     <!-- JS and jQuery -->
-    <script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
-    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Our Code -->
     <script type="text/javascript" src="/js/wildermuth.min.js"></script>
-
 
 
 </body>
